@@ -8,16 +8,28 @@ venv/
 .env
 
 # Data (local only)
-data/raw/
-data/processed/
+data/
 
-# OS files
-.DS_Store
+# Logs
+logs/
+*.log
 
 # Testing / coverage
 .pytest_cache/
 .coverage
 htmlcov/
+
+# Build artifacts
+dist/
+build/
+*.egg-info/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS files
+.DS_Store
+._*
 
 # IDE
 .vscode/
