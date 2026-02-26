@@ -1,0 +1,18 @@
+symbol: MES
+bar_size: 5min
+session: RTH
+
+strategy:
+  type: donchian
+  lookback: 20
+  atr_window: 14
+  atr_multiple: 3.0
+
+risk:
+  max_contracts: 5
+  max_trades_per_day: 10
+  daily_loss_limit_pct: 0.02
+
+execution:
+  commission_round_turn: 1.50
+  slippage_ticks: 1
