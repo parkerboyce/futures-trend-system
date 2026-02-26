@@ -9,7 +9,7 @@
 
 ## Timeframe & Session
 - Bar size: 5-minute bars
-- Trading session: RTH only (08:30–15:00 CT)
+- Trading session: RTH only (09:30–16:00 ET)
 - Position policy (v1): Flatten at RTH close
 
 ## Backtest Capital
@@ -18,8 +18,13 @@
 
 ## Continuous Futures Construction
 - Roll rule: Volume-based rollover (roll when next contract volume > front contract volume)
+- If on day D:
+    next_contract_volume(D) > front_contract_volume(D)
+Then:
+    roll_date = next RTH session open on D+1
 - Roll timing: Switch contracts at next RTH session open after trigger
 - Back-adjustment: Additive back-adjustment at roll to create smooth historical series
+  adjustment = front_last_price - next_first_price
 - Data storage: Parquet (raw per-contract + processed continuous)
 
 ## Strategy (Trend Following)

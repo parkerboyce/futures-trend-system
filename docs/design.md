@@ -70,6 +70,7 @@ A canonical `Bar` schema used across backtest and live:
 - Processed:
   - Continuous: `data/processed/<symbol>_continuous_<bar>.parquet`
   - Roll schedule: `data/processed/<symbol>_rolls.parquet`
+  - data/processed/<symbol>_continuous_metadata.json
   - Metadata/specs: `data/processed/contract_specs.json`
 
 ### Key APIs (design contracts)
