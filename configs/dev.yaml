@@ -1,6 +1,19 @@
-symbol: MES
-bar_size: 5min
-session: RTH
+databento:
+  api_key_env: DATABENTO_API_KEY
+  dataset: GLBX.MDP3
+  schema: ohlcv-1m
+  stype_in: raw_symbol
+
+market:
+  symbol: MES
+  bar_size: 5min
+  session: RTH
+  rth_start: "09:30"
+  rth_end: "16:00"
+
+data:
+  raw_dir: data/raw
+  processed_dir: data/processed
 
 strategy:
   type: donchian
