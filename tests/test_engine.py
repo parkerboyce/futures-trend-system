@@ -1,3 +1,3 @@
 def test_import():
     import ft
-    assert True
+    assert ft.__name__ == "ft"
